@@ -1,21 +1,18 @@
 
 civVehCommonData = [
-	"LIB_GazM1", 1.0				// staff car thing with various paintjobs
-	,"LIB_GazM1_dirty", 1.0
-	,"LIB_GazM1_SOV", 1.0
+	"LIB_GazM1", 1.0,
+	"LIB_GazM1_dirty", 1.0,
+	"LIB_GazM1_SOV", 1.0
 
-	,"LIB_Kfz1_Hood_sernyt", 1.0	// German car-ish things, for variety
-	,"LIB_Kfz1_sernyt", 1.0
+	"LIB_Kfz1_Hood_sernyt", 1.0,
+	"LIB_Kfz1_sernyt", 1.0,
 
-	,"LIB_UK_DR_Willys_MB", 0.7			// desert jeeps, but at least they don't have logos
-	,"LIB_UK_DR_Willys_MB_Hood", 0.7
+	"LIB_Willys_MB", 0.7,
+	"LIB_UK_DR_Willys_MB_Hood", 0.7,
 
-	//LIB_US_Willys_MB_w			// winter versions
-	//LIB_US_Willys_MB_Hood_w
-
-	,"LIB_CIV_FFI_CitC4_2", 0.3		// citroen bench trucks, non-winter. Same vehicle as Zis5v
-	,"LIB_CIV_FFI_CitC4_3", 0.3		// duped here because there aren't really enough common vehicles
-	,"LIB_CIV_FFI_CitC4", 0.3
+	"LIB_CIV_FFI_CitC4_2", 0.3,
+	"LIB_CIV_FFI_CitC4_3", 0.3,
+	"LIB_CIV_FFI_CitC4", 0.3
 ];
 
 civVehRepairData = [

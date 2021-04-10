@@ -15,6 +15,13 @@ if ([_sideX] call A3A_fnc_remUnitCount < _numberX) exitWith {
 
 _land = if (_posOrigin distance _posDestination > distanceForLandAttack) then {false} else {true};
 _typeGroup = if (_sideX == Occupants) then {if (_numberX == 4) then {selectRandom groupsNATOmid} else {selectRandom groupsNATOSquad}} else {if (_numberX == 4) then {selectRandom groupsCSATmid} else {selectRandom groupsCSATSquad}};
+
+//Feels appropriate for the paradrops to be actual paratroopers, so:
+if (!_land && sideX = Occupants){
+    _typeGroup = NATOParaDrop;
+	[2, "Changed the grouptype to be the NATO para drop group", _filename] call A3A_fnc_log;
+};
+
 _typeVehX = "";
 if (_land) then
 {

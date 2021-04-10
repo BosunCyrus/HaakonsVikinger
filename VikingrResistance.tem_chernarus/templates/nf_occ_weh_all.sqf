@@ -64,8 +64,8 @@ if (gameMode != 4) then
 	};
 
 //Police Units
-policeOfficer = "SG_sturmpanzer_unterofficer";
-policeGrunt = "SG_sturmpanzer_crew";
+policeOfficer = "I_NORTH_GER_AntistasiPoliceOfficer";
+policeGrunt = "I_NORTH_GER_AntistasiPoliceUnit";
 
 ////////////////////////////////////
 //            GROUPS             ///
@@ -82,6 +82,7 @@ groupsNATOmid = [["LIB_GER_unterofficer","LIB_GER_mgunner","LIB_GER_scout_ober_r
 //Squads
 NATOSquad = ["LIB_GER_unterofficer","LIB_GER_mgunner","LIB_GER_Soldier2_base","LIB_GER_scout_ober_rifleman","LIB_GER_stggunner","LIB_GER_AT_soldier","LIB_GER_scout_sniper","LIB_GER_medic"];
 NATOSpecOp = ["LIB_FSJ_NCO","LIB_FSJ_Mgunner","LIB_FSJ_Soldier_2","LIB_FSJ_AT_soldier","LIB_FSJ_Soldier_2","LIB_FSJ_sapper","LIB_FSJ_Sniper","LIB_FSJ_medic"];
+NATOParaDrop = ["LIB_FSJ_NCO","LIB_FSJ_Mgunner","LIB_FSJ_Soldier_2","LIB_FSJ_Soldier_2","LIB_FSJ_Sniper","LIB_FSJ_medic"];
 groupsNATOSquad =
 	[
 	NATOSquad,
@@ -163,8 +164,8 @@ vehNATOAir = vehNATOTransportHelis + vehNATOAttackHelis + [vehNATOPlane,vehNATOP
 if (gameMode != 4) then
 	{
 	vehFIAArmedCar = "LIB_Kfz1_MG42_camo";
-	vehFIATruck = "LIB_OpelBlitz_Open_Y_Camo_w";
-	vehFIACar = "LIB_Kfz1_hood_w";
+	vehFIATruck = "LIB_OpelBlitz_Open";
+	vehFIACar = "LIB_Kfz1_Hood_sernyt";
 	};
 
 //Police Vehicles
@@ -174,7 +175,8 @@ vehPoliceCar = "LIB_Kfz1_sernyt";
 //        STATIC WEAPONS         ///
 ////////////////////////////////////
 //Assembled Statics
-NATOMG = "LIB_MG42_Lafette_Deployed";
+//NATOMG = "LIB_MG42_Lafette_Deployed";
+NATOMG = "fow_w_mg42_deployed_high_ger_heer";
 staticATOccupants = "LIB_FlaK_36";
 staticAAOccupants = "LIB_Flakvierling_38";
 NATOMortar = "LIB_GrWr34_g";

@@ -23,7 +23,7 @@ private _addWeaponAndMags = {
 // Actually fast, unlike a setUnitLoadout with a full loadout
 _unit setUnitLoadout [ [], [], [],    [uniform _unit, []], [], [],    "", "", [],
 	["ItemMap","","","ItemCompass","ItemWatch",""] ];		// no GPS, radio, NVG
-if (haveRadio) then {_unit linkItem "ItemRadio"};
+//if (haveRadio) then {_unit linkItem "ItemRadio"};
 
 // Removed for the moment because I'm not sure what the intentions are for rebel uniforms
 // forceadd required for greenfor vanilla because allRebelUniforms has the blufor guerilla uniforms

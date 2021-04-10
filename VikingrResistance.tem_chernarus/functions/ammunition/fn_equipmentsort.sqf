@@ -89,6 +89,14 @@ allCivilianUniforms deleteAt (allCivilianUniforms find "U_O_ParadeUniform_01_CSA
 allCivilianUniforms deleteAt (allCivilianUniforms find "U_I_E_ParadeUniform_01_LDF_F");
 allCivilianUniforms deleteAt (allCivilianUniforms find "U_B_ParadeUniform_01_US_F");
 
+//Add for NF (these are uniforms that at a stretch could seem relatively civilian
+allCivilianUniforms pushBackUnique "U_NORTH_SOV_Obr31_W_Polushubuk";
+allCivilianUniforms pushBackUnique "fow_u_aus_m37_01_private";
+allCivilianUniforms pushBackUnique "fow_u_aus_m37_02_private";
+allCivilianUniforms pushBackUnique "fow_u_aus_m37_03_private";
+allCivilianUniforms pushBackUnique "U_LIB_US_Pilot";
+allCivilianUniforms pushBackUnique "U_LIB_US_Tank_Crew";
+
 ////////////////////////////////////
 //      Backpacks Sorting        ///
 ////////////////////////////////////
@@ -136,11 +144,19 @@ allBackpacksEmpty deleteAt (allBackpacksEmpty find "B_AssaultPack_Kerry");
 ////////////////////////////////////
 //WHY is there no clean list?
 //allArmoredVests = allVests select {getNumber (configfile >> "CfgWeapons" >> _x >> "ItemInfo" >> "HitpointsProtectionInfo" >> "Chest" >> "armor") > 5};
-allCivilianVests = allVests - allArmoredVests;
+allCivilianVests = allVests - allArmoredVests; 
 
 allCivilianVests deleteAt (allCivilianVests find "V_RebreatherB");
 allCivilianVests deleteAt (allCivilianVests find "V_RebreatherIR");
 allCivilianVests deleteAt (allCivilianVests find "V_RebreatherIA");
+
+//Add for NF (these are belts that at a stretch could seem relatively civilian
+allCivilianVests pushBackUnique "V_LIB_GER_PrivateBelt";
+allCivilianVests pushBackUnique "V_LIB_GER_OfficerBelt";
+allCivilianVests pushBackUnique "V_LIB_DAK_PrivateBelt";
+allCivilianVests pushBackUnique "V_LIB_DAK_OfficerBelt";
+allCivilianVests pushBackUnique "V_NORTH_Nor_Belt";
+allCivilianVests pushBackUnique "V_NORTH_SOV_Belt";
 
 ////////////////////////////////////
 //   ARMORED HELMETS LIST        ///

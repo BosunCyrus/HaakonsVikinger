@@ -320,6 +320,7 @@ private _templateVariables = [
 	"groupsNATOmid",
 	"NATOSquad",
 	"NATOSpecOp",
+	"NATOParaDrop",
 	"groupsNATOSquad",
 	"groupsFIASmall",
 	"groupsFIAMid",

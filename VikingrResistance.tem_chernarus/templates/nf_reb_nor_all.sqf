@@ -57,7 +57,7 @@ vehSDKRepair = "LIB_Zis6_Parm";
 civCar = "LIB_GazM1_dirty";
 civTruck = "LIB_Zis5v";
 civHeli = "not_supported";
-civBoat = "C_Boat_Transport_02_F";
+civBoat = "not_supported";
 
 ////////////////////////////////////
 //        STATIC WEAPONS         ///
@@ -122,6 +122,9 @@ initialRebelEquipment append ["U_LIB_CIV_Woodlander_1","U_LIB_CIV_Woodlander_2",
 
 initialRebelEquipment append ["U_LIB_UK_KhakiDrills","U_LIB_UK_DenisonSmock","U_LIB_UK_P37","U_LIB_US_AB_Uniform_M42","U_LIB_US_Bomber_Pilot","U_LIB_US_Pilot","U_LIB_US_Tank_Crew","U_LIB_US_Tank_Crew2"];
 initialRebelEquipment append ["fow_u_aus_m37_02_private","fow_u_aus_m37_03_private","fow_u_hi_m35_02_private"];
+
+initialRebelEquipment append ["U_NORTH_FIN_M22_36_Greatcoat_COL","U_NORTH_FIN_M30_Greatcoat_Private"];
+
 initialRebelEquipment append ["U_NORTH_NOR_I_Uniform","U_NORTH_NOR_I_Uniform1","U_NORTH_NOR_I_Uniform2","U_NORTH_NOR_I_Uniform3","U_NORTH_NOR_I_Uniform4","U_NORTH_NOR_I_Uniform_Sergeant","U_NORTH_NOR_I_Uniform_Specialist"];
 // Vests
 initialRebelEquipment append ["V_NORTH_Nor_Belt","V_NORTH_Nor_Belt_Madsen14","V_NORTH_Nor_Belt_Madsen22","V_NORTH_Nor_Belt_Officer","V_NORTH_Nor_Belt_Krag"];
@@ -176,6 +179,7 @@ initialRebelEquipment append ["NORTH_5Rnd_m39_mag","LIB_5Rnd_762x54"];
 initialRebelEquipment append ["LIB_5Rnd_762x63","fow_5Rnd_762x63"];
 initialRebelEquipment append ["LIB_5Rnd_792x57","fow_5Rnd_792x57"];
 initialRebelEquipment append ["NORTH_5Rnd_krag_bullets","NORTH_32rnd_sten_mag"];
+initialRebelEquipment append ["fow_6Rnd_12G_Pellets","fow_6Rnd_12G_Slug"];
 // Pistol Ammo
 initialRebelEquipment append ["fow_6Rnd_455","NORTH_6Rnd_m1893_mag","NORTH_8Rnd_tt33_mag","NORTH_8Rnd_l35_mag"];
 //just stuff
@@ -185,3 +189,6 @@ initialRebelEquipment append ["ACE_LIB_LandungPM"];
 initialRebelEquipment append ["NORTH_molotov_NOR","NORTH_NOR_IMPROV_GRENADE","NORTH_NOR_IMPROV_SMOKE"];
 //TFAR Unlocks
 if (hasTFAR && startWithLongRangeRadio) then {initialRebelEquipment pushBack "B_LIB_US_Radio"};
+
+// found something called fakemag floating around in arsenal... so just in case this has any effect:
+initialRebelEquipment deleteAt (initialRebelEquipment find "fakemag");
