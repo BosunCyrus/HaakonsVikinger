@@ -109,7 +109,7 @@ if (_isControl) then
 				};
 			if (random 10 < 2.5) then
 				{
-				_dog = [_groupX, "Fin_random_F",_positionX,[],0,"FORM"] call A3A_fnc_createUnit;
+				_dog = [_groupX, "Alsatian_Sandblack_F",_positionX,[],0,"FORM"] call A3A_fnc_createUnit;
 				[_dog,_groupX] spawn A3A_fnc_guardDog;
 				};
 			_nul = [leader _groupX, _markerX, "SAFE","SPAWNED","NOVEH2","NOFOLLOW"] execVM "scripts\UPSMON.sqf";//TODO need delete UPSMON link

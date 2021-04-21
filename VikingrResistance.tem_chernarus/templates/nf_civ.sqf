@@ -2,7 +2,7 @@
 civVehCommonData = [
 	"LIB_GazM1", 1.0,
 	"LIB_GazM1_dirty", 1.0,
-	"LIB_GazM1_SOV", 1.0
+	"LIB_GazM1_SOV", 1.0,
 
 	"LIB_Kfz1_Hood_sernyt", 1.0,
 	"LIB_Kfz1_sernyt", 1.0,

@@ -21,7 +21,7 @@ if ((isNil "_unit") || (isNull _unit)) exitWith
 private _type = typeOf _unit;
 private _side = side (group _unit);
 
-if (_type == "Fin_random_F") exitWith {};
+if (_type == "Alsatian_Sandblack_F") exitWith {};
 
 //Sets the EH for the unit
 _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageAAF];

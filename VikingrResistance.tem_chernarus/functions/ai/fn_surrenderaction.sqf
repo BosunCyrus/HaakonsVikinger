@@ -9,7 +9,7 @@ if !(local _unit) exitWith {
 if (_unit getVariable ["surrendered", false]) exitWith {};
 _unit setVariable ["surrendered", true, true];
 
-if (typeOf _unit == "Fin_random_F") exitWith {};		// dogs do not surrender?
+if (typeOf _unit == "Alsatian_Sandblack_F") exitWith {};		// dogs do not surrender?
 
 if (!alive _unit) exitWith {};							// Used to happen with ACE, seems to be fixed
 if (lifeState _unit == "INCAPACITATED") exitWith {

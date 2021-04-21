@@ -43,8 +43,8 @@ soldiersSDK = sdkTier1 + sdkTier2 + sdkTier3;
 //           VEHICLES            ///
 ////////////////////////////////////
 //Military Vehicles
-vehSDKBike = "fow_v_truppenfarrad_ger_ss";
-vehSDKLightArmed = "LIB_UK_Willys_MB_M1919_DLV";
+vehSDKBike = "fow_v_truppenfahrrad_ger_heer";
+vehSDKLightArmed = "LIB_UK_Willys_MB_M1919";
 vehSDKAT = "not_supported";
 vehSDKLightUnarmed = "LIB_US_Willys_MB";
 vehSDKTruck = "LIB_US6_Tent";

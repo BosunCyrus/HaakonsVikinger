@@ -24,17 +24,17 @@ CSATAmmoBox = "O_supplyCrate_F";
 //PvP Loadouts
 CSATPlayerLoadouts = [
 	//Team Leader
-	"LIB_SOV_scout_p_officer",
+	"O_NORTH_SOV_NAV_Submachinegunner_CPL",
 	//Medic
-	"LIB_SOV_medic",
+	"O_NORTH_SOV_NAV_Medic",
 	//Autorifleman
-	"LIB_SOV_mgunner",
+	"O_NORTH_SOV_NAV_Machinegunner",
 	//Marksman
-	"LIB_SOV_scout_sniper",
+	"O_NORTH_SOV_NAV_Sniper",
 	//Anti-tank Scout
-	"LIB_SOV_LAT_Soldier",
+	"O_NORTH_SOV_NAV_Rifleman_AT_F1",
 	//AT2
-	"LIB_SOV_LAT_Soldier"
+	"O_NORTH_SOV_NAV_Rifleman_AT_F1"
 ];
 
 //PVP Player Vehicles
@@ -44,19 +44,19 @@ vehCSATPVP = ["LIB_GazM1_SOV","LIB_GazM1_SOV_camo_sand","LIB_Willys_MB","LIB_Sco
 //             UNITS             ///
 ////////////////////////////////////
 //Military Units
-CSATGrunt = "LIB_SOV_rifleman";
-CSATOfficer = "LIB_SOV_captain_summer";
-CSATBodyG = "LIB_SOV_scout_mgunner";
-CSATCrew = "LIB_SOV_tank_crew";
-CSATMarksman = "LIB_SOV_scout_sniper";
-staticCrewInvaders = "LIB_SOV_gun_crew";
+CSATGrunt = "O_NORTH_SOV_Autorifleman";
+CSATOfficer = "O_NORTH_SOV_GRD_Officer_Cpt";
+CSATBodyG = "O_NORTH_SOV_GRD_Submachinegunner";
+CSATCrew = "O_NORTH_SOV_T_Crewman";
+CSATMarksman = "O_NORTH_SOV_GRD_Sniper";
+staticCrewInvaders = "O_NORTH_SOV_ART_Rifleman";
 CSATPilot = "LIB_SOV_pilot";
 
 //Militia Units
 if (gameMode == 4) then
 	{
-	FIARifleman = "LIB_NKVD_rifleman";
-	FIAMarksman = "LIB_NKVD_LC_rifleman";
+	FIARifleman = "O_NORTH_SOV_N_41_Rifleman";
+	FIAMarksman = "O_NORTH_SOV_N_41_Sniper";
 	};
 
 ////////////////////////////////////
@@ -64,20 +64,21 @@ if (gameMode == 4) then
 ////////////////////////////////////
 //Military Groups
 //Teams
-groupsCSATSentry = ["LIB_SOV_LC_rifleman_summer","LIB_SOV_rifleman"];
-groupsCSATSniper = ["LIB_SOV_scout_sniper_autumn","LIB_SOV_scout_sergeant"];
+//O_NORTH_SOV_R_Submachinegunner_SGT
+groupsCSATSentry = ["O_NORTH_SOV_Rifleman_CPL","O_NORTH_SOV_Autorifleman"];
+groupsCSATSniper = ["O_NORTH_SOV_R_Sniper","O_NORTH_SOV_R_Submachinegunner_SGT"];
 groupsCSATsmall = [groupsCSATSentry,groupsCSATSniper];
 //Fireteams
-groupsCSATAA = ["LIB_SOV_sergeant","LIB_SOV_mgunner","LIB_SOV_smgunner_summer","LIB_SOV_smgunner_summer"];
-groupsCSATAT = ["LIB_SOV_sergeant","LIB_SOV_rifleman","LIB_SOV_AT_soldier","LIB_SOV_AT_grenadier"];
-groupsCSATmid = [["LIB_SOV_sergeant","LIB_SOV_LC_rifleman_summer","LIB_SOV_smgunner_summer","LIB_SOV_LC_rifleman_summer"],groupsCSATAA,groupsCSATAT];
+groupsCSATAA = ["O_NORTH_SOV_Submachinegunner_SSGT","O_NORTH_SOV_Machinegunner","O_NORTH_SOV_Rifleman","O_NORTH_SOV_Autorifleman"];
+groupsCSATAT = ["O_NORTH_SOV_Submachinegunner_SSGT","O_NORTH_SOV_Rifleman","O_NORTH_SOV_Rifleman_AT_F1","O_NORTH_SOV_Rifleman_AT_F2"];
+groupsCSATmid = [["O_NORTH_SOV_Submachinegunner_SGT","O_NORTH_SOV_Rifleman_CPL","O_NORTH_SOV_Autorifleman","O_NORTH_SOV_Rifleman"],groupsCSATAA,groupsCSATAT];
 //Squads
-CSATSquad = ["LIB_SOV_sergeant","LIB_SOV_mgunner","LIB_SOV_LC_rifleman_summer","LIB_SOV_smgunner_summer","LIB_SOV_smgunner_summer","LIB_SOV_AT_soldier","LIB_SOV_AT_grenadier","LIB_SOV_medic"];
-CSATSpecOp = ["LIB_SOV_scout_p_officer","LIB_SOV_scout_sergeant","LIB_SOV_scout_mgunner","LIB_SOV_scout_smgunner","LIB_SOV_scout_rifleman","LIB_SOV_scout_smgunner","LIB_SOV_scout_sniper","LIB_SOV_scout_sniper"];
+CSATSquad = ["O_NORTH_SOV_Submachinegunner_SGT","O_NORTH_SOV_Machinegunner","O_NORTH_SOV_Autorifleman","O_NORTH_SOV_Autorifleman","O_NORTH_SOV_Rifleman","O_NORTH_SOV_Rifleman_AT_F1","O_NORTH_SOV_Rifleman_AT_F2","O_NORTH_SOV_Medic"];
+CSATSpecOp = ["O_NORTH_SOV_R_Officer_Lt","O_NORTH_SOV_R_Submachinegunner_SGT","O_NORTH_SOV_R_Machinegunner","O_NORTH_SOV_R_Submachinegunner","O_NORTH_SOV_R_Autorifleman","O_NORTH_SOV_R_Autorifleman","O_NORTH_SOV_R_Sniper","O_NORTH_SOV_R_Sniper_SVT"];
 groupsCSATSquad =
 	[
 	CSATSquad,
-	["LIB_SOV_sergeant","LIB_SOV_mgunner","LIB_SOV_LC_rifleman_summer","LIB_SOV_sapper","LIB_SOV_smgunner_summer","LIB_SOV_AT_soldier","LIB_SOV_assault_smgunner","LIB_SOV_medic"]
+	["O_NORTH_SOV_C_Submachinegunner_SGT","O_NORTH_SOV_C_Machinegunner","O_NORTH_SOV_C_Autorifleman","O_NORTH_SOV_Engineer","O_NORTH_SOV_C_Autorifleman","O_NORTH_SOV_C_Rifleman_AT_F1","O_NORTH_SOV_C_Officer_2ndLt","O_NORTH_SOV_C_Medic"]
 	];
 
 //Militia Groups
@@ -92,10 +93,10 @@ if (gameMode == 4) then
 	//Fireteams
 	groupsFIAMid =
 		[
-		["LIB_NKVD_p_officer","LIB_NKVD_smgunner","LIB_NKVD_LC_rifleman","LIB_NKVD_rifleman"]
+		["O_NORTH_SOV_N_41_Officer_Lt","O_NORTH_SOV_N_41_Submachinegunner","O_NORTH_SOV_N_41_Rifleman","O_NORTH_SOV_N_41_Rifleman"]
 		];
 	//Squads
-	FIASquad = ["LIB_NKVD_lieutenant","LIB_NKVD_smgunner","LIB_NKVD_smgunner","LIB_NKVD_p_officer","LIB_NKVD_p_officer","LIB_NKVD_LC_rifleman","LIB_NKVD_rifleman","LIB_SOV_medic"];
+	FIASquad = ["O_NORTH_SOV_N_41_Officer_Cpt","O_NORTH_SOV_N_41_Submachinegunner","O_NORTH_SOV_N_41_Submachinegunner","O_NORTH_SOV_N_41_Submachinegunner_SGT","O_NORTH_SOV_N_41_Submachinegunner_CPL","O_NORTH_SOV_N_41_Rifleman","O_NORTH_SOV_N_41_Rifleman","O_NORTH_SOV_N_41_Medic"];
 	groupsFIASquad = [FIASquad];
 	};
 
@@ -111,8 +112,8 @@ vehCSATTrucks = ["LIB_Zis5v","LIB_US6_Tent","LIB_US6_Open"];
 vehCSATAmmoTruck = "LIB_US6_Ammo";
 vehCSATLight = vehCSATLightArmed + vehCSATLightUnarmed;
 //Armored
-vehCSATAPC = ["LIB_SdKfz251_captured","LIB_SU85","LIB_T34_76","LIB_T34_85"];
-vehCSATTank = "ifa3_kv1a";
+vehCSATAPC = ["LIB_SdKfz251_captured","NORTH_SOV_41_T26_M33_OT","NORTH_SOV_41_T26_M31"];
+vehCSATTank = "NORTH_SOV_T28e";
 vehCSATAA = "LIB_Zis5v_61K";
 vehCSATAttack = vehCSATAPC + [vehCSATTank];
 //Boats
@@ -149,10 +150,10 @@ if (gameMode == 4) then
 //        STATIC WEAPONS         ///
 ////////////////////////////////////
 //Assembled Statics
-CSATMG = "LIB_Maxim_M30_Trench";
+CSATMG = "LIB_Maxim_M30_base";
 staticATInvaders = "LIB_Zis3";
 staticAAInvaders = "LIB_61k";
-CSATMortar = "LIB_BM37";
+CSATMortar = "NORTH_SOV_50rm38";
 
 //Static Weapon Bags
 MGStaticCSATB = "not_supported";
