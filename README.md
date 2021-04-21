@@ -7,10 +7,16 @@ Haakon's Vikinger (or Haakon's Vikings) is a modification of Antistasi, namely t
 
 Through Milorg's association with the Government in exile, over in London, Haakon's Vikinger: a group of the Norwegian Army local to Svartmarka has managed to make contact with a section of British Army commandos as well as other foreign volunteers, who have provided some supplies to compliment the weapons and uniforms left over from the Norwegian Army.
 
+---------------
 
 If you don't want to fight the Soviets, you can change the gamemode in parameters. Fighting the Soviets is still set as the default because it sounds more fun.
 
+---------------
+
 Disclaimer:
-This was created specifically for a group of friends who wanted to have the antistasi experience, but with a norwegian take. By extension of this, it is only tested with ALL of the mods that are marked as dependent, but it would probably still run with only Northern Fronts & Iron Front in Arma. I am also not an experienced ArmA developer, just someone who knows their way around computers who wanted to do Norway WW2 rather than Poland WW2. (Plus a suggestion to the Antistasi team, please make some documentation, there were some useful .txts laying around but it took me far too long to work out how to do some very simple things)
+This was created specifically for a group of friends who wanted to have the antistasi experience, but with a norwegian take. By extension of this, it is only tested with ALL of the mods that are marked as dependent, but it would probably still run with only Northern Fronts & Iron Front in Arma. I am also not an experienced ArmA developer, just someone who knows their way around computers who wanted to do Norway WW2 rather than Poland WW2.
+
+---------------
+
 This means:
 Some things are configured in a way I want them to be, rather than the ideal/accurate way. I don't mind at all if you take this addon and change it around how you want & publish it, although at least mention my name ;D.
