@@ -225,6 +225,12 @@ if !(hasIFA) then
 else
 {
     _unit unlinkItem (_unit call A3A_fnc_getRadio);
+	if !(sunOrMoon < 1) then
+	{
+		// in Northern Fronts was having an issue with the AI not being very responsive regardless of AI skill, if this is still in here by release then this fixed it
+		_unit setskill ["spotDistance", _skill * 1.3];
+        _unit setskill ["spotTime", _skill];
+	}
 };
 
 //Reveals all air vehicles to the unit, if it is either gunner of a vehicle or equipted with a launcher

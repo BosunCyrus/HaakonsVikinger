@@ -100,7 +100,7 @@ breachingExplosivesTank = [["LIB_Ladung_Big_MINE_mag", 1], ["LIB_Ladung_Small_MI
 // Primary Weapons
 initialRebelEquipment append ["NORTH_sten","NORTH_nor_krag1894"];
 initialRebelEquipment append ["NORTH_fin_m39"];
-initialRebelEquipment append ["LIB_K98","fow_w_m1903A1"];
+//initialRebelEquipment append ["LIB_K98","fow_w_m1903A1"];
 initialRebelEquipment append ["fow_w_M1912"];
 //initialRebelEquipment append ["fow_w_m1903A1_sniper","NORTH_fin_m39_PEM"];
 
