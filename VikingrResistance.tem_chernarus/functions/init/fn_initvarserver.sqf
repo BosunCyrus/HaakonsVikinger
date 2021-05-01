@@ -670,7 +670,7 @@ if (hasIFA) then {
 ////////////////////////////////////
 //     ACRE ITEM MODIFICATIONS   ///
 ////////////////////////////////////
-if (hasACRE) then {initialRebelEquipment append ["ACRE_PRC343","ACRE_PRC148","ACRE_PRC152","ACRE_PRC77","ACRE_PRC117F"];};
+//if (hasACRE) then {initialRebelEquipment append ["ACRE_PRC343","ACRE_PRC148","ACRE_PRC152","ACRE_PRC77","ACRE_PRC117F"];};
 
 ////////////////////////////////////
 //    UNIT AND VEHICLE PRICES    ///
@@ -706,8 +706,8 @@ timer setVariable [vehCSATMRLS,5,true];
 
 server setVariable [civCar,200,true];													//200
 server setVariable [civTruck,600,true];													//600
-server setVariable [civHeli,5000,true];													//5000
-server setVariable [civBoat,200,true];													//200
+server setVariable [civHeli,10000,true];													//5000
+server setVariable [civBoat,2000,true];													//200
 server setVariable [vehSDKBike ,50,true];												//50
 server setVariable [vehSDKLightUnarmed,200,true];										//200
 server setVariable [vehSDKTruck,300,true];											//300
@@ -739,7 +739,10 @@ DECLARE_SERVER_VAR(reinforceMarkerOccupants, []);
 DECLARE_SERVER_VAR(reinforceMarkerInvader, []);
 DECLARE_SERVER_VAR(canReinforceOccupants, []);
 DECLARE_SERVER_VAR(canReinforceInvader, []);
-
+////
+// stage!!!!!
+///
+northernFrontsStage = 0;
 /////////////////////////////////////////
 //     SYNCHRONISE SERVER VARIABLES   ///
 /////////////////////////////////////////

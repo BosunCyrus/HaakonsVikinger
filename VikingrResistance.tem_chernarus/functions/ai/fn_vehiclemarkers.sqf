@@ -58,7 +58,7 @@ else
 	};
 
 _typeX = format ["%1%2",_formatX,_typeX];
-if (_text == "MRAP"){
+if (_text == "MRAP") then {
 	_text = "Armed Vehicle";
 };
 if ((side group (driver _veh) != teamPlayer) and (side driver _veh != sideUnknown)) then {["TaskSucceeded", ["", format ["%1 Spotted",_text]]] spawn BIS_fnc_showNotification};

@@ -91,15 +91,16 @@ APERSMineMag = "LIB_shumine_42_MINE_mag";
 
 //Breaching explosives
 //Breaching APCs needs one demo charge
-breachingExplosivesAPC = [["LIB_Ladung_Small_MINE_mag", 1]];
+breachingExplosivesAPC = [["LIB_Ladung_Small_MINE_mag", 1],["fow_e_tnt_onepound_mag", 1],["fow_e_tnt_twopound_mag", 1],["fow_e_tnt_twohalfpound_mag", 1]];
 //Breaching tanks needs one satchel charge or two demo charges
-breachingExplosivesTank = [["LIB_Ladung_Big_MINE_mag", 1], ["LIB_Ladung_Small_MINE_mag", 2]];
+breachingExplosivesTank = [["LIB_Ladung_Big_MINE_mag", 1], ["LIB_Ladung_Small_MINE_mag", 2],["fow_e_tnt_onepound_mag", 2],["fow_e_tnt_twopound_mag", 1],["fow_e_tnt_twohalfpound_mag", 1]];
 
 //Starting Unlocks
 
 // Primary Weapons
-initialRebelEquipment append ["NORTH_sten","NORTH_nor_krag1894"];
-initialRebelEquipment append ["NORTH_fin_m39"];
+//initialRebelEquipment append ["NORTH_nor_krag1894"];
+//initialRebelEquipment append ["NORTH_sten"];
+//initialRebelEquipment append ["NORTH_fin_m39"];
 //initialRebelEquipment append ["LIB_K98","fow_w_m1903A1"];
 initialRebelEquipment append ["fow_w_M1912"];
 //initialRebelEquipment append ["fow_w_m1903A1_sniper","NORTH_fin_m39_PEM"];

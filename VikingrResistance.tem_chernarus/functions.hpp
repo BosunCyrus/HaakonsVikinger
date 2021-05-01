@@ -346,6 +346,7 @@ class A3A
 		class REP_Antenna {};
 		class RES_Prisoners {};
 		class RES_Refugees {};
+		class SPE_Airdrop {};
 		class taskUpdate {};
 		class underAttack {};
 	};

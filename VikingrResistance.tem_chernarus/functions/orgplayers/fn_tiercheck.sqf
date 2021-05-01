@@ -17,7 +17,7 @@ private _rebelPoints = 0;
 // war tier 10 = 70% of total points, WT8 = 42%, WT6 = 22%, WT4 = 8%, WT2 = 1%
 private _tierWar = 1 + floor (9 * sqrt (_rebelPoints / (0.7 * _totalPoints)));
 if (_tierWar > 10) then {_tierWar = 10};
-
+if (_rebelPoints >= 6 || _rebelPoints <= 9 && northernFrontsStage == 1) then { [northernFrontsStage,"A3A_fnc_SPE_Airdrop"] remoteExec ["A3A_fnc_scheduler",2] }; // Half way through war tier 1, but ideally should only fire once... if it fires more than once then something's gone buggered
 //_tierWar = 1 + (floor (((5*({(_x in outposts) or (_x in resourcesX) or (_x in citiesX)} count _sites)) + (10*({_x in seaports} count _sites)) + (20*({_x in airportsX} count _sites)))/10));
 if (_tierWar != tierWar) then
 {
@@ -27,4 +27,6 @@ if (_tierWar != tierWar) then
 	//Updates the vehicles and groups for the sites
 	[] call A3A_fnc_updatePreference;
 	//[] remoteExec ["A3A_fnc_statistics",[teamPlayer,civilian]];
+	
+	if (_tierWar == 2 && northernFrontsStage < 3) then { [northernFrontsStage,"A3A_fnc_SPE_Airdrop"] remoteExec ["A3A_fnc_scheduler",2] }; // When hit 16~ points, which should be war tier 2
 };

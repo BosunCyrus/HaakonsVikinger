@@ -1,110 +1,125 @@
-//Mission: Destroy the vehicle
-/*
 if (!isServer and hasInterface) exitWith{};
-
-private ["_markerX","_positionX","_dateLimit","_dateLimitNum","_nameDest","_typeVehX","_textX","_truckCreated","_size","_pos","_veh","_groupX","_unit"];
-
-_markerX = _this select 0;
-
-_difficultX = if (random 10 < tierWar) then {true} else {false};
-_leave = false;
-_contactX = objNull;
-_groupContact = grpNull;
-_tsk = "";
-_positionX = getMarkerPos _markerX;
-_sideX = if (sidesX getVariable [_markerX,sideUnknown] == Occupants) then {Occupants} else {Invaders};
-_timeLimit = if (_difficultX) then {30} else {120};
-if (hasIFA) then {_timeLimit = _timeLimit * 2};
-_dateLimit = [date select 0, date select 1, date select 2, date select 3, (date select 4) + _timeLimit];
-_dateLimitNum = dateToNumber _dateLimit;
-_dateLimit = numberToDate [date select 0, _dateLimitNum];//converts datenumber back to date array so that time formats correctly
-_displayTime = [_dateLimit] call A3A_fnc_dateToTimeString;//Converts the time portion of the date array to a string for clarity in hints
-
-_nameDest = [_markerX] call A3A_fnc_localizar;
-
-_typeVehX = if (_sideX == Occupants) then {vehNATOAA} else {vehCSATAA};
-
-[[teamPlayer,civilian],"DES",[format ["We know an enemy armor (%3) is stationed in %1. It is a good chance to destroy or steal it before it causes more damage. Do it before %2.",_nameDest,_displayTime,getText (configFile >> "CfgVehicles" >> (_typeVehX) >> "displayName")],"Steal or Destroy Armor",_markerX],_positionX,false,0,true,"Destroy",true] call BIS_fnc_taskCreate;
-_truckCreated = false;
-missionsX pushBack ["DES","CREATED"]; publicVariable "missionsX";
-
-waitUntil {sleep 1;(dateToNumber date > _dateLimitNum) or (spawner getVariable _markerX == 0)};
-_bonus = if (_difficultX) then {2} else {1};
-if (spawner getVariable _markerX == 0) then
-	{
-	_truckCreated = true;
-	_size = [_markerX] call A3A_fnc_sizeMarker;
-	_pos = [];
-	if (_size > 40) then {_pos = [_positionX, 10, _size, 10, 0, 0.3, 0] call BIS_Fnc_findSafePos} else {_pos = _positionX findEmptyPosition [10,60,_typeVehX]};
-	_veh = createVehicle [_typeVehX, _pos, [], 0, "NONE"];
-	_veh allowdamage false;
-	_veh setDir random 360;
-	[_veh, _sideX] call A3A_fnc_AIVEHinit;
-
-	_groupX = createGroup _sideX;
-
-	sleep 5;
-	_veh allowDamage true;
-	_typeX = if (_sideX == Occupants) then {NATOCrew} else {CSATCrew};
-	for "_i" from 1 to 3 do
-		{
-		_unit = [_groupX, _typeX, _pos, [], 0, "NONE"] call A3A_fnc_createUnit;
-		[_unit,""] call A3A_fnc_NATOinit;
-		sleep 2;
-		};
-
-	if (_difficultX) then
-		{
-		_groupX addVehicle _veh;
-		}
-	else
-		{
-		waitUntil {sleep 1;({leader _groupX knowsAbout _x > 1.4} count ([distanceSPWN,0,leader _groupX,teamPlayer] call A3A_fnc_distanceUnits) > 0) or (dateToNumber date > _dateLimitNum) or (not alive _veh) or ({(_x getVariable ["spawner",false]) and (side group _x == teamPlayer)} count crew _veh > 0)};
-
-		if ({leader _groupX knowsAbout _x > 1.4} count ([distanceSPWN,0,leader _groupX,teamPlayer] call A3A_fnc_distanceUnits) > 0) then {_groupX addVehicle _veh;};
-		};
-
-	waitUntil {sleep 1;(dateToNumber date > _dateLimitNum) or (not alive _veh) or ({(_x getVariable ["spawner",false]) and (side group _x == teamPlayer)} count crew _veh > 0)};
-
-	if ((not alive _veh) or ({(_x getVariable ["spawner",false]) and (side group _x == teamPlayer)} count crew _veh > 0)) then
-		{
-		["DES",[format ["We know an enemy armor (%3) is stationed in a %1. It is a good chance to steal or destroy it before it causes more damage. Do it before %2.",_nameDest,_displayTime,getText (configFile >> "CfgVehicles" >> (_typeVehX) >> "displayName")],"Steal or Destroy Armor",_markerX],_positionX,"SUCCEEDED","Destroy"] call A3A_fnc_taskUpdate;
-		if ({(_x getVariable ["spawner",false]) and (side group _x == teamPlayer)} count crew _veh > 0) then
-			{
-			["TaskFailed", ["", format ["AA Stolen in %1",_nameDest]]] remoteExec ["BIS_fnc_showNotification",_sideX];
-			};
-		[0,300*_bonus] remoteExec ["A3A_fnc_resourcesFIA",2];
-		if (_sideX == Invaders) then
-        {
-            [[0, 0], [10, 60]] remoteExec ["A3A_fnc_prestige",2];
-            [0,10*_bonus,_positionX] remoteExec ["A3A_fnc_citySupportChange",2]
-        }
-        else
-        {
-            [[10, 60], [0, 0]] remoteExec ["A3A_fnc_prestige",2];
-            [0,5*_bonus,_positionX] remoteExec ["A3A_fnc_citySupportChange",2]
-        };
-		[1200*_bonus, _sideX] remoteExec ["A3A_fnc_timingCA",2];
-		{if (_x distance _veh < 500) then {[10*_bonus,_x] call A3A_fnc_playerScoreAdd}} forEach (allPlayers - (entities "HeadlessClient_F"));
-		[5*_bonus,theBoss] call A3A_fnc_playerScoreAdd;
-		};
-	}
-else
-	{
-	["DES",[format ["We know an enemy armor (%3) is stationed in a %1. It is a good chance to steal or destroy it before it causes more damage. Do it before %2.",_nameDest,_displayTime,getText (configFile >> "CfgVehicles" >> (_typeVehX) >> "displayName")],"Steal or Destroy Armor",_markerX],_positionX,"FAILED","Destroy"] call A3A_fnc_taskUpdate;
-	[-5*_bonus,-100*_bonus] remoteExec ["A3A_fnc_resourcesFIA",2];
-	[5*_bonus,0,_positionX] remoteExec ["A3A_fnc_citySupportChange",2];
-	[-600*_bonus, _sideX] remoteExec ["A3A_fnc_timingCA",2];
-	[-10*_bonus,theBoss] call A3A_fnc_playerScoreAdd;
+didActivateNFSTage = 0;
+switch (northernFrontsStage) do {
+	case 0: {
+		_missionTitle = "Secure Stockpile";
+		_missionSubtitle = "Secure a stockpile of Norwegian Army weapons that are being loaded in a truck, near a warehouse under German control.";
+		_thirdVariable = "Stockpile"; // This third variable represents a marker (which we're not using anyway? & also a task type... it works as is, so I don't see the need to work out what it actually changes
+		_positionX = [7575,5212,215];
+		[[teamPlayer,civilian],"nfS",[_missionSubtitle,_missionTitle,_thirdVariable],_positionX,false,0,true,_thirdVariable,true] call BIS_fnc_taskCreate;
+		KragBox1 hideObject false;
+		KragBox2 hideObject false;
+		KragBox3 hideObject false;
+		KragBox4 hideObject false;
+		KragBoxTruck hideObject false;
+		KragMadsen1 hideObject false;
+		KragMadsen2 hideObject false;
+		KragMadsen3 hideObject false;
+		NFStageVehicle = KragBoxTruck;
+		didActivateNFSTage = 1;
 	};
-
-_nul = [1200,"DES"] spawn A3A_fnc_deleteTask;
-
-waitUntil {sleep 1; (spawner getVariable _markerX == 2)};
-
-if (_truckCreated) then
-{
-	[_groupX] spawn A3A_fnc_groupDespawner;
-	[_veh] spawn A3A_fnc_vehDespawner;
+	case 1: {
+		_missionTitle = "Recieve Sten Guns";
+		_missionSubtitle = "A local factory owner has made contact with Vikinger, he has risked his life to manufacture sten guns from British blueprints he obtained. The first batch is ready and he wants to give them to us.";
+		_thirdVariable = "Stenguns";
+		_positionX = [6479,2630,0];
+		[[teamPlayer,civilian],"nfS",[_missionSubtitle,_missionTitle,_thirdVariable],_positionX,false,0,true,_thirdVariable,true] call BIS_fnc_taskCreate;
+		StenGunTruck1 hideObject false;
+		NFStageVehicle = StenGunTruck1;
+		didActivateNFSTage = 1;
+	};
+	case 2: {
+		_missionTitle = "Recieve Sten Guns";
+		_missionSubtitle = "Our factory owner has made contact again. He has another batch of Sten guns in his house outside a Rafsbotn woodmill.";
+		_thirdVariable = "Stenguns";
+		_positionX = [10465,2591,0];
+		[[teamPlayer,civilian],"nfS",[_missionSubtitle,_missionTitle,_thirdVariable],_positionX,false,0,true,_thirdVariable,true] call BIS_fnc_taskCreate;
+		StenGunTruck2 hideObject false;
+		StenHouseMag1 hideObject false;
+		StenHouseMag2 hideObject false;
+		StenHouseMag3 hideObject false;
+		StenHouseGun1 hideObject false;
+		StenHouseGun2 hideObject false;
+		StenHouseGun3 hideObject false;
+		StenHouseBox1 hideObject false;
+		StenHouseBox2 hideObject false;
+		StenHouseBox3 hideObject false;
+		StenHouseBox4 hideObject false;
+		StenHouseBox5 hideObject false;
+		StenHouseBoxAlternative hideObject false;
+		
+		NFStageVehicle = StenGunTruck2;
+		didActivateNFSTage = 1;
+	};
 };
-*/
+
+if (didActivateNFSTage == 1) then
+{
+	didActivateNFSTage == 2;
+	missionsX pushBack ["nfS","CREATED"]; publicVariable "missionsX";
+	_CanI = canSuspend;
+	waitUntil {sleep 1; (isPlayer driver NFStageVehicle) or (not alive NFStageVehicle) };
+	if (isPlayer (driver NFStageVehicle)) then
+	{
+		//["nfS","SUCCEEDED"] call BIS_fnc_taskSetState;
+		["nfS",[_missionSubtitle,_missionTitle,_thirdVariable],_positionX,"SUCCEEDED", _thirdVariable] call A3A_fnc_taskUpdate;
+		northernFrontsStage = northernFrontsStage + 1;
+		switch (NFStageVehicle) do {
+			case KragBoxTruck: {
+				"NORTH_nor_krag1894" call A3A_fnc_unlockEquipment;
+			};
+			case StenGunTruck1: {
+				"NORTH_fin_m39" call A3A_fnc_unlockEquipment;
+			};
+			case StenGunTruck2: {
+				"NORTH_sten" call A3A_fnc_unlockEquipment;
+			};
+		};
+	};
+	if !(alive NFStageVehicle) then
+	{
+		//["nfS","FAILED"] call BIS_fnc_taskSetState;
+		switch (NFStageVehicle) do {
+			case KragBoxTruck: {
+				_MissionUpdatedTitle = "Find Stockpile";
+				_MissionUpdatedSubtitle = "With the truck destroyed, you should check the warehouse to see if all of the rifles were loaded in on time...";
+				["nfS",[_MissionUpdatedSubtitle,_MissionUpdatedTitle,_thirdVariable],_positionX,"ASSIGNED", _thirdVariable] call A3A_fnc_taskUpdate;
+				NFhaveFoundAlternative = 0;
+				KragBoxTruckAlternative hideObject false;
+				KragBoxTruckAlternative addAction["Secure stockpile", {NFhaveFoundAlternative = 1;}];
+				waitUntil {sleep 1; NFhaveFoundAlternative != 0};
+				KragBoxTruckAlternative hideObject true;
+				["nfS",[_missionSubtitle,_missionTitle,_thirdVariable],_positionX,"SUCCEEDED", _thirdVariable] call A3A_fnc_taskUpdate;
+				"NORTH_nor_krag1894" call A3A_fnc_unlockEquipment;
+				northernFrontsStage = northernFrontsStage + 1;
+			};
+			case StenGunTruck1: {
+				["nfS",[_missionSubtitle,_missionTitle,_thirdVariable],_positionX,"FAILED", _thirdVariable] call A3A_fnc_taskUpdate;
+				northernFrontsStage = northernFrontsStage + 1;
+			};
+			case StenGunTruck2: {
+				_MissionUpdatedTitle = "Secure Stockpile";
+				_MissionUpdatedSubtitle = "With the truck destroyed, you should find the house where the truck was parked. It's likely there are still supplies there.";
+				["nfS",[_MissionUpdatedSubtitle,_MissionUpdatedTitle,_thirdVariable],_positionX,"ASSIGNED", _thirdVariable] call A3A_fnc_taskUpdate;
+				NFhaveFoundAlternative = 0;
+				StenHouseBoxAlternative addAction["Secure stockpile", {NFhaveFoundAlternative = 1;}];
+				waitUntil {sleep 1; NFhaveFoundAlternative != 0};
+				StenHouseBox1 hideObject true;
+				StenHouseBox2 hideObject true;
+				StenHouseBox3 hideObject true;
+				StenHouseBox4 hideObject true;
+				StenHouseBox5 hideObject true;
+				StenHouseBoxAlternative hideObject true;
+				["nfS",[_missionSubtitle,_missionTitle,_thirdVariable],_positionX,"SUCCEEDED", _thirdVariable] call A3A_fnc_taskUpdate;
+				"NORTH_sten" call A3A_fnc_unlockEquipment;
+				northernFrontsStage = northernFrontsStage + 1;
+			};
+		};
+	};
+	_nul = [60,"nfS"] call A3A_fnc_deleteTask;
+	didActivateNFSTage = 0;
+};
+
+//when they get in vehicles:
+//_nul = ["nfS"] call BIS_fnc_deleteTask;
+

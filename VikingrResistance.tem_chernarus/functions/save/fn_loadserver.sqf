@@ -35,6 +35,7 @@ if (isServer) then {
 	["killZones"] call A3A_fnc_getStatVariable;
 	["controlsSDK"] call A3A_fnc_getStatVariable;
 	["bombRuns"] call A3A_fnc_getStatVariable;
+	["northernFrontsStage"] call A3A_fnc_getStatVariable;
 	waitUntil {!isNil "arsenalInit"};
 	["jna_dataList"] call A3A_fnc_getStatVariable;
 	//===========================================================================
@@ -211,5 +212,18 @@ if (isServer) then {
 	statsLoaded = 0; publicVariable "statsLoaded";
 	placementDone = true; publicVariable "placementDone";
 	petros allowdamage true;
+	if !(northernFrontsStage < 3) then
+	{
+		StengunHouse1 hideObject true;
+		StengunHouse2 hideObject false;
+		StenhouseCorpse1 hideObject false;
+		StenhouseCorpse2 hideObject false;
+		StenhouseCorpse3 hideObject false;
+		StenhouseCorpseGun1 hideObject false;
+		
+		StenhouseFire1 hideObject false;
+		StenhouseFire2 hideObject false;
+		StenhouseFire3 hideObject false;
+	};
 };
 diag_log format ["%1: [Antistasi] | INFO | loadServer Completed.",servertime];

@@ -21,7 +21,8 @@ publicVariable "petros";
 
 deleteVehicle _oldPetros;		// Petros should now be leader unless there's a player in the group
 
-private _name = if (worldName == "Tanoa") then {"Maru"} else {"Petros"};
+//private _name = if (worldName == "Tanoa") then {"Maru"} else {"Petros"};
+private _name = "Placeholder";
 [petros, "friendlyX"] remoteExec ["setIdentity", 0];
 [petros, _name] remoteExec ["setName", 0];
 
