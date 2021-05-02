@@ -17,6 +17,10 @@ lootItem append allUAVTerminals + allMineDetectors + allGPS + allRadios + allLas
 //    Weapons    ///
 ////////////////////
 lootWeapon append allRifles + allSniperRifles + allHandguns + allMachineGuns + allMissileLaunchers + allRocketLaunchers + allSMGs + allShotguns;
+lootWeapon deleteAt (lootWeapon find "fow_w_type100");
+lootWeapon deleteAt (lootWeapon find "fow_w_type99");
+lootWeapon deleteAt (lootWeapon find "fow_w_type99_lmg");
+lootWeapon deleteAt (lootWeapon find "fow_w_type99_sniper");
 
 /////////////////////////////
 //   Weapon Attachments   ///
