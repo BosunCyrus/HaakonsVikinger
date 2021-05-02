@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1025;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=4310;
+		nextID=4345;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3448;
+		nextID=3622;
 	};
 	class Camera
 	{
-		pos[]={206.35606,222.78806,1355.7656};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={6072.5889,163.89566,4888.1074};
+		dir[]={0.71017951,-0.69924408,-0.082669906};
+		up[]={0.6945855,0.71484393,-0.080851682};
+		aside[]={-0.11562929,-7.5320713e-007,-0.99335575};
 	};
 };
 binarizationWanted=0;
@@ -36,6 +36,7 @@ addons[]=
 	"A3_Characters_F",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Modules_F_Hc",
+	"cyrus_nf_antistasi",
 	"ttc_fow_tfar_compat",
 	"NF_NOR_Uniforms",
 	"A3_Structures_F_Exp_Military_Fortifications",
@@ -103,13 +104,15 @@ addons[]=
 	"ace_cargo",
 	"ace_dragging",
 	"IFA3_COMP_ACE_cargo",
-	"A3_Modules_F_Effects"
+	"A3_Modules_F_Effects",
+	"A3_Structures_F_EPA_Civ_Camping",
+	"WW2_Assets_c_Weapons_Misc_c_Arsenal"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=67;
+		items=70;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -145,347 +148,365 @@ class AddonsMetaData
 		};
 		class Item5
 		{
+			className="cyrus_nf_antistasi";
+			name="Northern Fronts Antistasi Config";
+			author="Cyrus";
+		};
+		class Item6
+		{
 			className="ttc_fow_tfar_compat";
 			name="FOW TFAR Compatibility Patch";
 			author="TsimTheCreep";
 		};
-		class Item6
+		class Item7
 		{
 			className="NF_NOR_Uniforms";
 			name="Northern Fronts - Uniforms";
 			author="Northern Fronts Mod";
 		};
-		class Item7
+		class Item8
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item9
 		{
 			className="CUP_Buildings_Config";
 			name="CUP_Buildings_Config";
 		};
-		class Item9
+		class Item10
 		{
 			className="WW2_Objects_c_Misc_WW2_SimpleObjects_c_CUP";
 			name="WW2_Objects_c_Misc_WW2_SimpleObjects_c_CUP";
 		};
-		class Item10
+		class Item11
 		{
 			className="NORTH_Structures";
 			name="NORTH_Structures";
 		};
-		class Item11
+		class Item12
 		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item12
+		class Item13
 		{
 			className="fow_veg_p_c";
 			name="fow_veg_p_c";
 		};
-		class Item13
+		class Item14
 		{
 			className="A3_Structures_F_Enoch_Industrial";
 			name="Arma 3 Contact Platform - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item15
 		{
 			className="WW2_Objects_c_Misc_I44_ShowClassInEditor_Buildings_c";
 			name="WW2_Objects_c_Misc_I44_ShowClassInEditor_Buildings_c";
 		};
-		class Item15
+		class Item16
 		{
 			className="WW2_Objects_c_Misc_WW2_SimpleObjects_c_I44";
 			name="WW2_Objects_c_Misc_WW2_SimpleObjects_c_I44";
 		};
-		class Item16
+		class Item17
 		{
 			className="WW2_Objects_c_Misc_I44_EditorMapSizeAndIcon_c";
 			name="WW2_Objects_c_Misc_I44_EditorMapSizeAndIcon_c";
 		};
-		class Item17
+		class Item18
 		{
 			className="WW2_Objects_c_Misc_I44_EditorPreviews_c";
 			name="WW2_Objects_c_Misc_I44_EditorPreviews_c";
 		};
-		class Item18
+		class Item19
 		{
 			className="IFA3_COMP_ACE_main";
 			name="IFA3_COMP_ACE_main";
 			author="IFA3 team";
 			url="https://github.com/bux578/IFA3_ACE_COMPAT";
 		};
-		class Item19
+		class Item20
 		{
 			className="WW2_Objects_c_Vegetation_WW2_RJW_Normandy_c";
 			name="WW2_Objects_c_Vegetation_WW2_RJW_Normandy_c";
 		};
-		class Item20
+		class Item21
 		{
 			className="WW2_Objects_c_Misc_WW2_EditorPreview_c";
 			name="WW2_Objects_c_Misc_WW2_EditorPreview_c";
 		};
-		class Item21
+		class Item22
 		{
 			className="WW2_Objects_c_Misc_WW2_SimpleObjects_c_WW2";
 			name="WW2_Objects_c_Misc_WW2_SimpleObjects_c_WW2";
 		};
-		class Item22
+		class Item23
 		{
 			className="WW2_Objects_c_Misc_IF_EditorMapSizeAndIcon_c";
 			name="WW2_Objects_c_Misc_IF_EditorMapSizeAndIcon_c";
 		};
-		class Item23
+		class Item24
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item25
 		{
 			className="CUP_CAStructures_Mil";
 			name="CUP_CAStructures_Mil";
 		};
-		class Item25
+		class Item26
 		{
 			className="A3_Structures_F_Enoch_Civilian";
 			name="Arma 3 Contact Platform - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item27
 		{
 			className="fow_structures_p_c";
 			name="fow_structures_p_c";
 		};
-		class Item27
+		class Item28
 		{
 			className="fow_structures_c";
 			name="fow_structures_c";
 		};
-		class Item28
+		class Item29
 		{
 			className="WW2_Objects_c_Vegetation_IF_Misc_c";
 			name="WW2_Objects_c_Vegetation_IF_Misc_c";
 		};
-		class Item29
+		class Item30
 		{
 			className="WW2_Objects_c_Misc_WW2_SimpleObjects_c_IF";
 			name="WW2_Objects_c_Misc_WW2_SimpleObjects_c_IF";
 		};
-		class Item30
+		class Item31
 		{
 			className="WW2_Objects_c_Misc_IF_EditorPreview_c";
 			name="WW2_Objects_c_Misc_IF_EditorPreview_c";
 		};
-		class Item31
+		class Item32
 		{
 			className="NORTH_weapons_cfg";
 			name="Northern Fronts - Weapons";
 			author="Northern Fronts Mod";
 		};
-		class Item32
+		class Item33
 		{
 			className="CUP_Misc_e_Config";
 			name="CUP_Misc_e_Config";
 		};
-		class Item33
+		class Item34
 		{
 			className="CUP_Editor_Buildings_Config";
 			name="CUP_Editor_Buildings_Config";
 		};
-		class Item34
+		class Item35
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item35
+		class Item36
 		{
 			className="A3_Structures_F_Argo";
 			name="Arma 3 Malden - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item36
+		class Item37
 		{
 			className="WW2_Objects_c_Structures_WW2_BET_Militia_c";
 			name="WW2_Objects_c_Structures_WW2_BET_Militia_c";
 		};
-		class Item37
+		class Item38
 		{
 			className="A3_Data_F";
 			name="Arma 3 - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item38
+		class Item39
 		{
 			className="CUP_CAMisc";
 			name="CUP_CAMisc";
 		};
-		class Item39
+		class Item40
 		{
 			className="CUP_CAMisc_ACR_Sign_Mines";
 			name="CUP_CAMisc_ACR_Sign_Mines";
 		};
-		class Item40
+		class Item41
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item41
+		class Item42
 		{
 			className="WW2_Objects_c_Structures_I44_Objects_Bunker_c";
 			name="WW2_Objects_c_Structures_I44_Objects_Bunker_c";
 		};
-		class Item42
+		class Item43
 		{
 			className="WW2_Objects_c_Structures_IF_Buildings2_c";
 			name="WW2_Objects_c_Structures_IF_Buildings2_c";
 		};
-		class Item43
+		class Item44
 		{
 			className="WW2_Objects_c_Structures_WW2_Bunkers_c";
 			name="WW2_Objects_c_Structures_WW2_Bunkers_c";
 		};
-		class Item44
+		class Item45
 		{
 			className="CUP_CAMisc_E_WF";
 			name="CUP_CAMisc_E_WF";
 		};
-		class Item45
+		class Item46
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item46
+		class Item47
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item47
+		class Item48
 		{
 			className="WW2_Assets_c_Weapons_InfantryWeapons_c";
 			name="WW2_Assets_c_Weapons_InfantryWeapons_c";
 		};
-		class Item48
+		class Item49
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item49
+		class Item50
 		{
 			className="CUP_CAStructures_E_Misc_Misc_Market";
 			name="CUP_CAStructures_E_Misc_Misc_Market";
 		};
-		class Item50
+		class Item51
 		{
 			className="NORTH_Misc_Objects";
 			name="Northern Fronts - Caps";
 			author="Northern Fronts Mod";
 		};
-		class Item51
+		class Item52
 		{
 			className="WW2_Objects_c_Vegetation_IF_Trees_c";
 			name="WW2_Objects_c_Vegetation_IF_Trees_c";
 		};
-		class Item52
+		class Item53
 		{
 			className="CUP_Editor_Plants_Config";
 			name="CUP_Editor_Plants_Config";
 		};
-		class Item53
+		class Item54
 		{
 			className="fow_veg_e_c";
 			name="fow_veg_e_c";
 		};
-		class Item54
+		class Item55
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item55
+		class Item56
 		{
 			className="WW2_Assets_c_Weapons_Ammoboxes_c";
 			name="WW2_Assets_c_Weapons_Ammoboxes_c";
 		};
-		class Item56
+		class Item57
 		{
 			className="WW2_Assets_c_Weapons_SimpleObjects_c";
 			name="WW2_Assets_c_Weapons_SimpleObjects_c";
 		};
-		class Item57
+		class Item58
 		{
 			className="WW2_Core_c_WW2_EditorPreviews_c";
 			name="WW2_Core_c_WW2_EditorPreviews_c";
 		};
-		class Item58
+		class Item59
 		{
 			className="WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz";
 			name="WW2_Assets_c_Vehicles_Wheeled_c_OpelBlitz";
 		};
-		class Item59
+		class Item60
 		{
 			className="WW2_Assets_c_Vehicles_Icons_c";
 			name="WW2_Assets_c_Vehicles_Icons_c";
 		};
-		class Item60
+		class Item61
 		{
 			className="WW2_Assets_c_Vehicles_Pictures_c";
 			name="WW2_Assets_c_Vehicles_Pictures_c";
 		};
-		class Item61
+		class Item62
 		{
 			className="WW2_Assets_c_Vehicles_SimpleObjects_c";
 			name="WW2_Assets_c_Vehicles_SimpleObjects_c";
 		};
-		class Item62
+		class Item63
 		{
 			className="WW2_Assets_c_Vehicles_Wheeled_c_Zis5v";
 			name="WW2_Assets_c_Vehicles_Wheeled_c_Zis5v";
 		};
-		class Item63
+		class Item64
 		{
 			className="WW2_Objects_c_Structures_IF_Buildings_c";
 			name="WW2_Objects_c_Structures_IF_Buildings_c";
 		};
-		class Item64
+		class Item65
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item65
+		class Item66
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item66
+		class Item67
 		{
 			className="IFA3_COMP_ACE_cargo";
 			name="IFA3_COMP_ACE_cargo";
+		};
+		class Item68
+		{
+			className="A3_Structures_F_EPA";
+			name="Arma 3 Survive Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item69
+		{
+			className="WW2_Assets_c_Weapons_Misc_c_Arsenal";
+			name="WW2_Assets_c_Weapons_Misc_c_Arsenal";
 		};
 	};
 };
@@ -34904,7 +34925,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6084.2788,157.49084,4887.2529};
+				position[]={6084.1699,157.4512,4887.0464};
 				angles[]={6.1375284,4.5911803,0.15192458};
 			};
 			side="Empty";
@@ -34915,6 +34936,7 @@ class Mission
 			};
 			id=3706;
 			type="Fort_Crate_wood";
+			atlOffset=0.0073242188;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -36672,7 +36694,7 @@ class Mission
 			name="NF Event Stuff";
 			class Entities
 			{
-				items=13;
+				items=14;
 				class Item0
 				{
 					dataType="Object";
@@ -38761,9 +38783,767 @@ class Mission
 					id=4290;
 					atlOffset=1.1004105;
 				};
+				class Item13
+				{
+					dataType="Layer";
+					name="Starting Table of Goodies";
+					class Entities
+					{
+						items=18;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.4805,156.93303,4883.7529};
+								angles[]={6.2260084,0,0.058608156};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableObject";
+							};
+							id=4310;
+							type="Land_WoodenTable_large_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.249,157.35825,4883.2212};
+								angles[]={6.2260084,1.3329604,0.058695421};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTablePistol1";
+							};
+							id=4316;
+							type="NORTH_Weapon_l35_l35";
+							atlOffset=0.035507202;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.5869,157.47554,4884.627};
+								angles[]={6.2260084,0.77513558,0.058695421};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTablePistol2";
+							};
+							id=4317;
+							type="NORTH_Weapon_m1893_m1893";
+							atlOffset=0.052474976;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.7808,157.37953,4883.6592};
+								angles[]={6.2260084,4.6858602,0.058695421};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableRifle1";
+							};
+							id=4319;
+							type="NORTH_Weapon_fin_m27_fin_m27";
+							atlOffset=0.00047302246;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.917,157.39227,4883.7598};
+								angles[]={6.2260084,4.6327667,0.058695421};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableRifle2";
+							};
+							id=4321;
+							type="NORTH_Weapon_fin_m28_fin_m28";
+							atlOffset=0.86700439;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.645,157.3335,4882.9941};
+								angles[]={6.2260084,3.2095208,0.058695421};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableRifle3";
+							};
+							id=4322;
+							type="NORTH_Weapon_fin_m28_30_fin_m28_30";
+							atlOffset=0.00048828125;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.6758,157.3255,4882.8232};
+								angles[]={6.2260084,3.2095208,0.058695421};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableRifle4";
+							};
+							id=4324;
+							type="NORTH_Weapon_fin_m28_30_fin_m28_30";
+							atlOffset=0.00045776367;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.3242,157.45494,4884.5361};
+								angles[]={6.2260084,4.5765324,0.058695421};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTablePistol3";
+							};
+							id=4326;
+							type="NORTH_Weapon_m1893_m1893";
+							atlOffset=0.052520752;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6082.6841,156.89314,4884.2002};
+								angles[]={0,6.2741795,1.228799};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableRifle5";
+							};
+							id=4327;
+							type="NORTH_Weapon_nor_krag1894_nor_krag1894";
+							atlOffset=0.41499329;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item9
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6082.6528,156.88109,4884.458};
+								angles[]={0,6.2741795,1.228799};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableRifle6";
+							};
+							id=4329;
+							type="NORTH_Weapon_nor_krag1894_nor_krag1894";
+							atlOffset=0.38999939;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item10
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.6138,157.34685,4883.2598};
+								angles[]={6.2260084,0,0.058695421};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableGun1";
+							};
+							id=4333;
+							type="NORTH_Magazine_5Rnd_m39_mag";
+							atlOffset=0.00047302246;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item11
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.4951,157.33888,4883.207};
+								angles[]={6.2260084,0,0.058695421};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableGun2";
+							};
+							id=4334;
+							type="NORTH_Magazine_5Rnd_m39_mag";
+							atlOffset=0.0024871826;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.3882,157.3553,4883.0542};
+								angles[]={3.174562,3.500694,6.1959014};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableGun3";
+							};
+							id=4335;
+							type="NORTH_Magazine_5Rnd_m39_mag";
+							atlOffset=0.033950806;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item13
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.6138,157.34062,4883.1509};
+								angles[]={6.2260084,0,0.058695421};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableGun4";
+							};
+							id=4336;
+							type="NORTH_Magazine_5Rnd_m39_mag";
+							atlOffset=0.00047302246;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item14
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.5161,157.3497,4883.5361};
+								angles[]={6.2260084,0,0.058695421};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableGun5";
+							};
+							id=4337;
+							type="NORTH_Magazine_8Rnd_l35_mag";
+							atlOffset=0.86076355;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item15
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6082.9775,157.29816,4883.1387};
+								angles[]={0,4.3222208,0};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableGun6";
+							};
+							id=4338;
+							type="NORTH_Magazine_8Rnd_l35_mag";
+							atlOffset=0.86355591;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item16
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.3428,157.2986,4883.8291};
+								angles[]={0,4.8730116,0};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableGun7";
+							};
+							id=4340;
+							type="NORTH_Magazine_5Rnd_krag_bullets";
+							atlOffset=0.80303955;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item17
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6083.353,157.17406,4884.2598};
+								angles[]={6.2260084,0,0.058695421};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="call{this hideObject true;}";
+								name="nfTableHelmet";
+							};
+							id=4344;
+							type="Headgear_H_LIB_UK_Helmet_Mk2";
+							atlOffset=0.70700073;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="NORTH_vehIdents_init";
+									expression="_this call compile _value";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+					};
+					id=4342;
+					atlOffset=0.76945496;
+				};
 			};
 			id=4135;
-			atlOffset=-78.296112;
+			atlOffset=29.13707;
 		};
 		class Item118
 		{
