@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3334;
+		nextID=3448;
 	};
 	class Camera
 	{
-		pos[]={10445.602,22.181255,2571.8647};
-		dir[]={0.90549612,-0.21528171,-0.3657245};
-		up[]={0.19962816,0.97654444,-0.080628671};
-		aside[]={-0.374506,-1.8397986e-007,-0.92723566};
+		pos[]={206.35606,222.78806,1355.7656};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -713,8 +713,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6082.5947,157.15388,4890.1567};
-						angles[]={6.2204218,5.3271818,0.11473211};
+						position[]={6076.3335,156.91801,4891.7568};
+						angles[]={6.1615076,1.7508118,0.013336525};
 					};
 					side="Independent";
 					flags=6;
@@ -1616,7 +1616,7 @@ class Mission
 				class Item1
 				{
 					dataType="Marker";
-					position[]={6955.2349,6.0085158,2346.9265};
+					position[]={6957.2021,5.9785633,2354.1658};
 					name="seaport_1";
 					markerType="RECTANGLE";
 					type="rectangle";
@@ -1625,7 +1625,6 @@ class Mission
 					b=64.266464;
 					angle=142.39305;
 					id=163;
-					atlOffset=0.075335503;
 				};
 				class Item2
 				{
@@ -1712,7 +1711,7 @@ class Mission
 				};
 			};
 			id=161;
-			atlOffset=-3.1098289;
+			atlOffset=-3.1110592;
 		};
 		class Item19
 		{
@@ -2484,7 +2483,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Roads";
-			state=2;
 			class Entities
 			{
 				items=40;
@@ -34825,8 +34823,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6076.6357,157.47592,4894.7075};
-				angles[]={6.1486158,0,6.2702389};
+				position[]={6084.3696,157.50235,4889.4087};
+				angles[]={6.1747823,0,0.11473211};
 			};
 			side="Empty";
 			flags=4;
@@ -34836,7 +34834,7 @@ class Mission
 			};
 			id=3692;
 			type="Land_Campfire_F";
-			atlOffset=0.0013427734;
+			atlOffset=-0.00024414063;
 			class CustomAttributes
 			{
 				class Attribute0
