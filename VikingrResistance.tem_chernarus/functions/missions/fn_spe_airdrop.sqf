@@ -80,6 +80,8 @@ if (didActivateNFSTage == 1) then
 				northernFrontsStage = 2;
 				[3,"Northern Fronts: Somebody got in the drivers seat of the first stengun truck, success.",_filename] call A3A_fnc_log;
 				"NORTH_fin_m39" call A3A_fnc_unlockEquipment;
+				"NORTH_nor_smle" call A3A_fnc_unlockEquipment;
+				"fow_w_m1903A1" call A3A_fnc_unlockEquipment;
 			};
 			case StenGunTruck2: {
 				northernFrontsStage = 3;
@@ -108,8 +110,11 @@ if (didActivateNFSTage == 1) then
 				northernFrontsStage = 1;
 			};
 			case StenGunTruck1: {
-				[3,"Northern Fronts: The mission failed.",_filename] call A3A_fnc_log;
+				[3,"Northern Fronts: The first stengun mission failed.",_filename] call A3A_fnc_log;
 				["nfS",[_missionSubtitle,_missionTitle,_thirdVariable],_positionX,"FAILED", _thirdVariable] call A3A_fnc_taskUpdate;
+				"NORTH_fin_m39" call A3A_fnc_unlockEquipment;
+				"NORTH_nor_smle" call A3A_fnc_unlockEquipment;
+				"fow_w_m1903A1" call A3A_fnc_unlockEquipment;
 				northernFrontsStage = 2;
 			};
 			case StenGunTruck2: {
