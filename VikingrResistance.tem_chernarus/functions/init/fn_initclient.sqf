@@ -495,7 +495,7 @@ if (petros == leader group petros) then {
 };
 petros setIdentity "friendlyX";
 //if (worldName == "Tanoa") then {petros setName "Maru"} else {petros setName "Petros"};
-petros setName "Placeholder";
+petros setName "Bjørn";
 
 disableSerialization;
 //1 cutRsc ["H8erHUD","PLAIN",0,false];
