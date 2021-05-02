@@ -19,6 +19,28 @@ switch (northernFrontsStage) do {
 		KragMadsen2 hideObject false;
 		KragMadsen3 hideObject false;
 		NFStageVehicle = KragBoxTruck;
+		
+		// Table of weapons for starting
+		nfTableObject hideObject false;
+		nfTableGun1 hideObject false;
+		nfTableGun2 hideObject false;
+		nfTableGun3 hideObject false;
+		nfTableGun4 hideObject false;
+		nfTableGun5 hideObject false;
+		nfTableGun6 hideObject false;
+		nfTableGun7 hideObject false;
+		nfTablePistol1 hideObject false;
+		nfTablePistol2 hideObject false;
+		nfTablePistol3 hideObject false;
+		nfTableRifle1 hideObject false;
+		nfTableRifle2 hideObject false;
+		nfTableRifle3 hideObject false;
+		nfTableRifle4 hideObject false;
+		nfTableRifle5 hideObject false;
+		nfTableRifle6 hideObject false;
+		
+		nfTableHelmet hideObject false;
+		
 		didActivateNFSTage = 1;
 	};
 	case 1: {
@@ -75,6 +97,7 @@ if (didActivateNFSTage == 1) then
 				northernFrontsStage = 1;
 				[3,"Northern Fronts: Somebody got in the drivers seat of the Krag truck, success.",_filename] call A3A_fnc_log;
 				"NORTH_nor_krag1894" call A3A_fnc_unlockEquipment;
+				"fow_w_M1912" call A3A_fnc_unlockEquipment;
 			};
 			case StenGunTruck1: {
 				northernFrontsStage = 2;

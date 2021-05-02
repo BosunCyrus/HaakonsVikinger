@@ -102,7 +102,7 @@ breachingExplosivesTank = [["LIB_Ladung_Big_MINE_mag", 1], ["LIB_Ladung_Small_MI
 //initialRebelEquipment append ["NORTH_sten"];
 //initialRebelEquipment append ["NORTH_fin_m39"];
 //initialRebelEquipment append ["LIB_K98","fow_w_m1903A1"];
-initialRebelEquipment append ["fow_w_M1912"];
+//initialRebelEquipment append ["fow_w_M1912"];
 //initialRebelEquipment append ["fow_w_m1903A1_sniper","NORTH_fin_m39_PEM"];
 
 // Launchers
@@ -110,7 +110,8 @@ initialRebelEquipment append ["LIB_Bagpipes"];
 	
 // Secondary Weapons
 initialRebelEquipment append ["fow_w_webley"];
-initialRebelEquipment append ["NORTH_TT33","NORTH_m1893", "NORTH_l35"];
+initialRebelEquipment append ["NORTH_m1893", "NORTH_l35"];
+//initialRebelEquipment append ["NORTH_TT33"];
 // Uniform
 /*
 initialRebelEquipment append ["U_LIB_CIV_Citizen_1","U_LIB_CIV_Citizen_2","U_LIB_CIV_Citizen_3","U_LIB_CIV_Citizen_4","U_LIB_CIV_Citizen_5","U_LIB_CIV_Citizen_6","U_LIB_CIV_Citizen_7","U_LIB_CIV_Citizen_8"];
