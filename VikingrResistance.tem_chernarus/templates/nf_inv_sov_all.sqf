@@ -16,7 +16,7 @@ flagCSATmrk = "LIB_faction_RKKA";
 if (isServer) then {"CSAT_carrier" setMarkerText "Soviet Reinforcements"};
 
 //Loot Crate
-CSATAmmoBox = "O_supplyCrate_F";
+CSATAmmoBox = "LIB_WeaponsBox_Big_SU";
 
 ////////////////////////////////////
 //   PVP LOADOUTS AND VEHICLES   ///

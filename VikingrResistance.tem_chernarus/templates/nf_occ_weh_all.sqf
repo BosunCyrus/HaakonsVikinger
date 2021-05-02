@@ -18,7 +18,7 @@ flagNATOmrk = "LIB_faction_WEHRMACHT";
 if (isServer) then {"NATO_carrier" setMarkerText "Wehrmacht Reinforcements"};
 
 //Loot Crate
-NATOAmmobox = "B_supplyCrate_F";
+NATOAmmobox = "LIB_WeaponsBox_Big_GER";
 
 ////////////////////////////////////
 //   PVP LOADOUTS AND VEHICLES   ///
