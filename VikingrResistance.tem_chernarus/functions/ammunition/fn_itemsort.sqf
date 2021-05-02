@@ -5,9 +5,9 @@ if (teamPlayer isEqualTo west) then {
 };
 
 if (teamPlayer isEqualTo west) then {
-	flyGear pushBack "U_B_PilotCoveralls"
+	flyGear pushBack "U_LIB_GER_LW_pilot"
 } else {
-	flyGear pushBack "U_I_pilotCoveralls"
+	flyGear pushBack "fow_u_us_pilot_02"
 };
 //Lights Vs Laser ID
 {
