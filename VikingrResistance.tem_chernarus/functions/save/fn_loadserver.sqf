@@ -225,5 +225,10 @@ if (isServer) then {
 		StenhouseFire2 hideObject false;
 		StenhouseFire3 hideObject false;
 	};
+	if ("nfS" call BIS_fnc_taskExists) then
+	{
+		_nul = [0,"nfS"] call A3A_fnc_deleteTask;
+		[northernFrontsStage,"A3A_fnc_SPE_Airdrop"] remoteExec ["A3A_fnc_scheduler",2]
+	}
 };
 diag_log format ["%1: [Antistasi] | INFO | loadServer Completed.",servertime];

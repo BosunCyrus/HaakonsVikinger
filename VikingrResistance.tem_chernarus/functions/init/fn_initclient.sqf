@@ -530,6 +530,72 @@ else
 //Move the player to HQ now they're initialised.
 player setPos (getMarkerPos respawnTeamPlayer);
 
+// Hide/show some stuff based on the Northern Fronts Stage
+if (didActivateNFSTage != 0) then {
+	switch (northernFrontsStage) do {
+		case 0: {
+			KragBox1 hideObject false;
+			KragBox2 hideObject false;
+			KragBox3 hideObject false;
+			KragBox4 hideObject false;
+			KragBoxTruck hideObject false;
+			KragMadsen1 hideObject false;
+			KragMadsen2 hideObject false;
+			KragMadsen3 hideObject false;
+			
+			nfTableObject hideObject false;
+			nfTableGun1 hideObject false;
+			nfTableGun2 hideObject false;
+			nfTableGun3 hideObject false;
+			nfTableGun4 hideObject false;
+			nfTableGun5 hideObject false;
+			nfTableGun6 hideObject false;
+			nfTableGun7 hideObject false;
+			nfTablePistol1 hideObject false;
+			nfTablePistol2 hideObject false;
+			nfTablePistol3 hideObject false;
+			nfTableRifle1 hideObject false;
+			nfTableRifle2 hideObject false;
+			nfTableRifle3 hideObject false;
+			nfTableRifle4 hideObject false;
+			nfTableRifle5 hideObject false;
+			nfTableRifle6 hideObject false;
+			nfTableHelmet hideObject false;
+		};
+		case 1: {
+			StenGunTruck1 hideObject false;
+		};
+		case 2: {
+			StenGunTruck2 hideObject false;
+			StenHouseMag1 hideObject false;
+			StenHouseMag2 hideObject false;
+			StenHouseMag3 hideObject false;
+			StenHouseGun1 hideObject false;
+			StenHouseGun2 hideObject false;
+			StenHouseGun3 hideObject false;
+			StenHouseBox1 hideObject false;
+			StenHouseBox2 hideObject false;
+			StenHouseBox3 hideObject false;
+			StenHouseBox4 hideObject false;
+			StenHouseBox5 hideObject false;
+			StenHouseBoxAlternative hideObject false;
+		};
+	};
+};
+if !(northernFrontsStage < 3) then
+	{
+		StengunHouse1 hideObject true;
+		StengunHouse2 hideObject false;
+		StenhouseCorpse1 hideObject false;
+		StenhouseCorpse2 hideObject false;
+		StenhouseCorpse3 hideObject false;
+		StenhouseCorpseGun1 hideObject false;
+		
+		StenhouseFire1 hideObject false;
+		StenhouseFire2 hideObject false;
+		StenhouseFire3 hideObject false;
+	};
+
 //Disables rabbits and snakes, because they cause the log to be filled with "20:06:39 Ref to nonnetwork object Agent 0xf3b4a0c0"
 //Can re-enable them if we find the source of the bug.
 enableEnvironment [false, true];
