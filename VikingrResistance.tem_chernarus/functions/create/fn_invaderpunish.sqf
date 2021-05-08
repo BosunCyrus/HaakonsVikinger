@@ -119,9 +119,9 @@ for "_i" from 0 to _numCiv do {
 	_rnd = random 100;
 	if (_rnd < 90) then {
 		if (_rnd < 25) then {
-			[_civ, "hgun_PDW2000_F", 5, 0] call BIS_fnc_addWeapon;
+			[_civ, "NORTH_sten", 5, 0] call BIS_fnc_addWeapon;
 		} else {
-			[_civ, "hgun_Pistol_heavy_02_F", 5, 0] call BIS_fnc_addWeapon;
+			[_civ, "NORTH_m1893", 5, 0] call BIS_fnc_addWeapon;
 		};
 	};
 	_civilians pushBack _civ;
