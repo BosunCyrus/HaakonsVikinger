@@ -150,10 +150,10 @@ initialRebelEquipment append ["H_NORTH_Nor_Fieldcap","H_NORTH_NOR_Kepi","H_NORTH
 initialRebelEquipment append ["fow_h_hi_beret","fow_h_hi_beret_headset","fow_h_hi_officer_cap"];
 initialRebelEquipment append ["fow_h_uk_beret","fow_h_uk_beret_commando","fow_h_uk_beret_commando_nor","fow_h_uk_beret_para","fow_h_uk_pib_beret","fow_h_uk_beret_rtr","fow_h_uk_beret_rtr_headset","fow_h_uk_beret_sas_2","H_LIB_UK_Pilot_Cap"];
 initialRebelEquipment append ["fow_h_uk_jungle_hat_01","fow_h_uk_jungle_hat_02","fow_h_uk_jungle_hat_03"];
-initialRebelEquipment append ["H_LIB_CIV_Villager_Cap_1","H_LIB_CIV_Worker_Cap_1","H_LIB_CIV_Worker_Cap_2","H_LIB_CIV_Worker_Cap_3","H_LIB_CIV_Worker_Cap_4"];
+/* initialRebelEquipment append ["H_LIB_CIV_Villager_Cap_1","H_LIB_CIV_Worker_Cap_1","H_LIB_CIV_Worker_Cap_2","H_LIB_CIV_Worker_Cap_3","H_LIB_CIV_Worker_Cap_4"];
 initialRebelEquipment append ["H_NORTH_Fedora_B1","H_NORTH_Fedora_B2","H_NORTH_Fedora_B","H_NORTH_Fedora_Br","H_NORTH_Fedora","H_NORTH_Fedora_0","H_NORTH_Fedora_W"];
 initialRebelEquipment append ["H_NORTH_Homburg_Bl","H_NORTH_Homburg_B","H_NORTH_Homburg_Br","H_NORTH_Homburg"];
-initialRebelEquipment append ["H_NORTH_Workercap_Be","H_NORTH_Workercap_Bl","H_NORTH_Workercap","H_NORTH_Workercap_G","H_NORTH_Workercap_R"];
+initialRebelEquipment append ["H_NORTH_Workercap_Be","H_NORTH_Workercap_Bl","H_NORTH_Workercap","H_NORTH_Workercap_G","H_NORTH_Workercap_R"]; */
 initialRebelEquipment append ["H_NORTH_FIN_M22_Furhat","H_NORTH_FIN_M22_Furhat_officer","H_NORTH_FIN_M27_furhat","H_NORTH_FIN_M39_furhat_biege","H_NORTH_FIN_M39_furhat_biege_open","H_NORTH_FIN_M27_civilguardhat","H_NORTH_FIN_M36_fieldcap","H_NORTH_FIN_M36_fieldcap_worn_reversed"];
 // Face
 initialRebelEquipment append ["fow_g_glasses1","fow_g_glasses2","fow_g_glasses3","fow_g_glasses4"];

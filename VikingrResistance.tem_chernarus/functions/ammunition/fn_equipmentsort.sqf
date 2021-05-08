@@ -156,6 +156,8 @@ allCivilianVests pushBackUnique "V_LIB_GER_OfficerBelt";
 allCivilianVests pushBackUnique "V_LIB_DAK_PrivateBelt";
 allCivilianVests pushBackUnique "V_LIB_DAK_OfficerBelt";
 allCivilianVests pushBackUnique "V_NORTH_Nor_Belt";
+allCivilianVests pushBackUnique "V_NORTH_Nor_Belt_Krag";
+allCivilianVests pushBackUnique "V_NORTH_Nor_Belt_Officer";
 allCivilianVests pushBackUnique "V_NORTH_SOV_Belt";
 
 ////////////////////////////////////
@@ -226,6 +228,11 @@ allCivilianHeadGear deleteAt (allCivilianHeadGear find "H_LIB_UK_Beret");
 allCivilianHeadGear deleteAt (allCivilianHeadGear find "H_LIB_UK_Para_Beret");
 allCivilianHeadGear deleteAt (allCivilianHeadGear find "H_LIB_UK_Beret_Headset");
 allCivilianHeadGear deleteAt (allCivilianHeadGear find "H_LIB_UK_Beret_Tankist");
+
+allCivilianHeadGear pushBackUnique ["H_LIB_CIV_Villager_Cap_1","H_LIB_CIV_Worker_Cap_1","H_LIB_CIV_Worker_Cap_2","H_LIB_CIV_Worker_Cap_3","H_LIB_CIV_Worker_Cap_4"];
+allCivilianHeadGear pushBackUnique ["H_NORTH_Fedora_B1","H_NORTH_Fedora_B2","H_NORTH_Fedora_B","H_NORTH_Fedora_Br","H_NORTH_Fedora","H_NORTH_Fedora_0","H_NORTH_Fedora_W"];
+allCivilianHeadGear pushBackUnique ["H_NORTH_Homburg_Bl","H_NORTH_Homburg_B","H_NORTH_Homburg_Br","H_NORTH_Homburg"];
+allCivilianHeadGear pushBackUnique ["H_NORTH_Workercap_Be","H_NORTH_Workercap_Bl","H_NORTH_Workercap","H_NORTH_Workercap_G","H_NORTH_Workercap_R"];
 
 //////////////////
 //   Glasses   ///
