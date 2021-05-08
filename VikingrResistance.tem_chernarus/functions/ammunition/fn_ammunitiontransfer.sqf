@@ -1,5 +1,7 @@
 if (!isServer) exitWith {};
 private ["_subObject","_ammunition","_originX","_destinationX"];
+private _filename = "fn_ammunitiontransfer.sqf";
+[3,"Antistasi Arsenal Debug: Ammunition transfer called.",_filename] call A3A_fnc_log;
 _originX = _this select 0;
 if (isNull _originX) exitWith {};
 _destinationX = _this select 1;
