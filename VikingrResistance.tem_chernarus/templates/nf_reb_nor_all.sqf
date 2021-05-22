@@ -4,6 +4,7 @@
 nameTeamPlayer = "Vikinger";
 SDKFlag = "NORTH_Flag_NOR";
 SDKFlagTexture = "NORTH\NF_Misc_Objects\flags\data\flag_nor_co.paa"; if (isServer) then {flagX setFlagTexture SDKFlagTexture};
+flagSDKmrk = "LIB_faction_WEHRMACHT";
 typePetros = "I_NORTH_NOR_Officer";
 
 ////////////////////////////////////
@@ -91,9 +92,9 @@ APERSMineMag = "LIB_shumine_42_MINE_mag";
 
 //Breaching explosives
 //Breaching APCs needs one demo charge
-breachingExplosivesAPC = [["LIB_Ladung_Small_MINE_mag", 1],["fow_e_tnt_onepound_mag", 1],["fow_e_tnt_twopound_mag", 1],["fow_e_tnt_twohalfpound_mag", 1]];
+breachingExplosivesAPC = [["LIB_US_TNT_4pound_mag", 1],["LIB_Ladung_Big_MINE_mag", 1],["LIB_Ladung_Small_MINE_mag", 1],["fow_e_tnt_onepound_mag", 1],["fow_e_tnt_twopound_mag", 1],["fow_e_tnt_twohalfpound_mag", 1]];
 //Breaching tanks needs one satchel charge or two demo charges
-breachingExplosivesTank = [["LIB_Ladung_Big_MINE_mag", 1], ["LIB_Ladung_Small_MINE_mag", 2],["fow_e_tnt_onepound_mag", 2],["fow_e_tnt_twopound_mag", 1],["fow_e_tnt_twohalfpound_mag", 1]];
+breachingExplosivesTank = [["LIB_US_TNT_4pound_mag", 1],["LIB_Ladung_Big_MINE_mag", 1], ["LIB_Ladung_Small_MINE_mag", 2],["fow_e_tnt_onepound_mag", 2],["fow_e_tnt_twopound_mag", 1],["fow_e_tnt_twohalfpound_mag", 1]];
 
 //Starting Unlocks
 
@@ -122,8 +123,19 @@ initialRebelEquipment append ["U_NORTH_CIV_Jacket_1","U_NORTH_CIV_Jacket_2","U_N
 initialRebelEquipment append ["U_LIB_CIV_Woodlander_1","U_LIB_CIV_Woodlander_2","U_LIB_CIV_Woodlander_3","U_LIB_CIV_Woodlander_4"];
 */
 
+/*
+
+22:53:59 "146.22: [Antistasi] | ERROR | fn_arsenal_additem.sqf | Failed to addItem:[-1,""fow_u_hi_m35_02_private"",-1]."
+22:53:59 "146.516: [Antistasi] | ERROR | fn_arsenal_additem.sqf | Failed to addItem:[-1,""NORTH_fin_PanzerschreckFrame"",-1]."
+22:54:00 "146.735: [Antistasi] | ERROR | fn_arsenal_additem.sqf | Failed to addItem:[-1,""H_NORTH_NOR_Kepi_Loytant"",-1]."
+22:54:00 "146.797: [Antistasi] | ERROR | fn_arsenal_additem.sqf | Failed to addItem:[-1,""fow_h_uk_beret"",-1]."
+22:54:00 "146.938: [Antistasi] | ERROR | fn_arsenal_additem.sqf | Failed to addItem:[-1,""H_NORTH_FIN_M39_furhat_biege"",-1]."
+22:54:00 "147: [Antistasi] | ERROR | fn_arsenal_additem.sqf | Failed to addItem:[-1,""H_NORTH_FIN_M39_furhat_biege_open"",-1]."
+22:54:01 "147.78: [Antistasi] | ERROR | fn_arsenal_additem.sqf | Failed to addItem:[-1,""ACE_LIB_LandungPM"",-1]."
+*/
+
 initialRebelEquipment append ["U_LIB_UK_KhakiDrills","U_LIB_UK_DenisonSmock","U_LIB_UK_P37","U_LIB_US_AB_Uniform_M42","U_LIB_US_Bomber_Pilot","U_LIB_US_Pilot","U_LIB_US_Tank_Crew","U_LIB_US_Tank_Crew2"];
-initialRebelEquipment append ["fow_u_aus_m37_02_private","fow_u_aus_m37_03_private","fow_u_hi_m35_02_private"];
+//initialRebelEquipment append ["fow_u_aus_m37_02_private","fow_u_aus_m37_03_private","fow_u_hi_m35_02_private"];
 
 initialRebelEquipment append ["U_NORTH_FIN_M22_36_Greatcoat_COL","U_NORTH_FIN_M30_Greatcoat_Private"];
 
@@ -137,7 +149,8 @@ initialRebelEquipment append ["V_LIB_UK_P37_Rifleman","V_LIB_UK_P37_Gasmask","V_
 initialRebelEquipment append ["V_LIB_UK_P37_Rifleman_Blanco","V_LIB_UK_P37_Gasmask_Blanco","V_LIB_UK_P37_Heavy_Blanco"];
 initialRebelEquipment append ["V_LIB_WP_SniperBela"];
 // Backpacks
-initialRebelEquipment append ["NORTH_fin_BreadBag","NORTH_fin_BreadBag2","NORTH_fin_BreadBag3","NORTH_fin_MolotovBag","NORTH_fin_PanzerschreckFrame","NORTH_fin_Sipuli"];
+initialRebelEquipment append ["NORTH_fin_BreadBag","NORTH_fin_BreadBag2","NORTH_fin_BreadBag3","NORTH_fin_MolotovBag","NORTH_fin_Sipuli"];
+//NORTH_fin_PanzerschreckFrame
 initialRebelEquipment append ["NORTH_fin_Kyynel","fow_b_torn_radio","fow_b_us_radio","fow_b_uk_p37_radio","fow_b_uk_p37_radio_blanco","B_LIB_US_Radio"];
 initialRebelEquipment append ["NORTH_nor_MadsenBag","NORTH_nor_Telemark","NORTH_SOV_M35bpk","NORTH_SOV_M38bpk"];
 
@@ -154,7 +167,9 @@ initialRebelEquipment append ["fow_h_uk_jungle_hat_01","fow_h_uk_jungle_hat_02",
 initialRebelEquipment append ["H_NORTH_Fedora_B1","H_NORTH_Fedora_B2","H_NORTH_Fedora_B","H_NORTH_Fedora_Br","H_NORTH_Fedora","H_NORTH_Fedora_0","H_NORTH_Fedora_W"];
 initialRebelEquipment append ["H_NORTH_Homburg_Bl","H_NORTH_Homburg_B","H_NORTH_Homburg_Br","H_NORTH_Homburg"];
 initialRebelEquipment append ["H_NORTH_Workercap_Be","H_NORTH_Workercap_Bl","H_NORTH_Workercap","H_NORTH_Workercap_G","H_NORTH_Workercap_R"]; */
-initialRebelEquipment append ["H_NORTH_FIN_M22_Furhat","H_NORTH_FIN_M22_Furhat_officer","H_NORTH_FIN_M27_furhat","H_NORTH_FIN_M39_furhat_biege","H_NORTH_FIN_M39_furhat_biege_open","H_NORTH_FIN_M27_civilguardhat","H_NORTH_FIN_M36_fieldcap","H_NORTH_FIN_M36_fieldcap_worn_reversed"];
+initialRebelEquipment append ["H_NORTH_FIN_M22_Furhat","H_NORTH_FIN_M22_Furhat_officer","H_NORTH_FIN_M27_furhat","H_NORTH_FIN_M27_civilguardhat","H_NORTH_FIN_M36_fieldcap","H_NORTH_FIN_M36_fieldcap_worn_reversed"];
+//H_NORTH_FIN_M39_furhat_biege_open
+//H_NORTH_FIN_M39_furhat_biege
 // Face
 initialRebelEquipment append ["fow_g_glasses1","fow_g_glasses2","fow_g_glasses3","fow_g_glasses4"];
 initialRebelEquipment append ["fow_g_gloves1","fow_g_gloves2","fow_g_gloves3","fow_g_gloves4","fow_g_gloves5","fow_g_gloves6"];
