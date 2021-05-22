@@ -17,11 +17,21 @@ params ["_className", ["_dontAddToArsenal", false]];
 
 private _categories = _className call A3A_fnc_equipmentClassToCategories;
 
-if (!_dontAddToArsenal) then {
-	//Add the equipment to the arsenal.
-	private _arsenalTab = _className call jn_fnc_arsenal_itemType;
-	[_arsenalTab,_className,-1] call jn_fnc_arsenal_addItem;
+if (typename _a != "BOOL") then {
+	if (!_dontAddToArsenal) then {
+		//Add the equipment to the arsenal.
+		private _arsenalTab = _className call jn_fnc_arsenal_itemType;
+		[_arsenalTab,_className,-1] call jn_fnc_arsenal_addItem;
+	};
+}
+else
+{
+	if (_dontAddToArsenal == 2) then {
+		private _arsenalTab = _className call jn_fnc_arsenal_itemType;
+		[_arsenalTab,_className,-1] call jn_fnc_arsenal_addItem;
+	};
 };
+
 
 {
 	private _categoryName = _x;
