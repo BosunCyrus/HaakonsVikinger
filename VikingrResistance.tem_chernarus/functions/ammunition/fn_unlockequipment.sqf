@@ -17,7 +17,7 @@ params ["_className", ["_dontAddToArsenal", false]];
 
 private _categories = _className call A3A_fnc_equipmentClassToCategories;
 
-if (typename _a != "BOOL") then {
+if (typename _dontAddToArsenal == "BOOL") then {
 	if (!_dontAddToArsenal) then {
 		//Add the equipment to the arsenal.
 		private _arsenalTab = _className call jn_fnc_arsenal_itemType;
